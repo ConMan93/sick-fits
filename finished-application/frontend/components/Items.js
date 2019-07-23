@@ -41,6 +41,7 @@ class Items extends Component {
           // fetchPolicy="network-only"
           variables={{
             skip: this.props.page * perPage - perPage,
+            first: 4
           }}
         >
           {({ data, error, loading }) => {
