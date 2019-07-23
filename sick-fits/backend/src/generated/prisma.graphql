@@ -1590,8 +1590,8 @@ type User implements Node {
   resetToken: String
   resetTokenExpiry: String
   cart(where: CartItemWhereInput, orderBy: CartItemOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [CartItem!]
-  createdAt: DateTime!
-  updatedAt: DateTime!
+  # createdAt: DateTime!
+  # updatedAt: DateTime!
   permissions: [Permission!]
 }
 
