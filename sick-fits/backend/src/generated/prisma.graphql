@@ -31,8 +31,8 @@ type CartItem implements Node {
   quantity: Int!
   item(where: ItemWhereInput): Item
   user(where: UserWhereInput): User!
-  createdAt: DateTime!
-  updatedAt: DateTime!
+  # createdAt: DateTime!
+  # updatedAt: DateTime!
 }
 
 """A connection to a list of items."""
@@ -767,8 +767,8 @@ type Order implements Node {
   items(where: OrderItemWhereInput, orderBy: OrderItemOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [OrderItem!]
   total: Int!
   user(where: UserWhereInput): User!
-  createdAt: DateTime!
-  updatedAt: DateTime!
+  # createdAt: DateTime!
+  # updatedAt: DateTime!
   charge: String!
 }
 
@@ -838,6 +838,7 @@ input OrderItemCreateInput {
   largeImage: String
   price: Int!
   quantity: Int
+  user: UserCreateOneInput
 }
 
 input OrderItemCreateManyInput {
