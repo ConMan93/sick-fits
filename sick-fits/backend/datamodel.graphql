@@ -48,10 +48,13 @@ type OrderItem {
   user: User
 }
 
+# @model(timestamps: {create: "createdAt", update: "updatedAt" }) possible solution to being unable to query createdAt / updatedAt
 type Order {
   id: ID! @id
   items: [OrderItem!]!
   total: Int!
   user: User
   charge: String!
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
 }

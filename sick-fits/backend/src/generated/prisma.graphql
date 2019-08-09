@@ -767,8 +767,8 @@ type Order implements Node {
   items(where: OrderItemWhereInput, orderBy: OrderItemOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [OrderItem!]
   total: Int!
   user(where: UserWhereInput): User!
-  # createdAt: DateTime!
-  # updatedAt: DateTime!
+  createdAt: DateTime! 
+  updatedAt: DateTime!
   charge: String!
 }
 
